@@ -39,5 +39,10 @@ internal class Program
 
         Console.WriteLine("Saldo da conta da Julia depois de receber transferencia = " + contaDaJulia.saldo);
 
+        ContaCorrente contaDoGael = new ContaCorrente();
+        Console.WriteLine(contaDoGael.titular);
+        Console.WriteLine(contaDoGael.saldo);
+        Console.WriteLine(contaDoGael.numero_agencia);
+        Console.WriteLine(contaDoGael.conta);
     }
 }
