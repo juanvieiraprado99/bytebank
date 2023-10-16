@@ -10,7 +10,10 @@ internal class Program
         contaDoJuan.conta = "1010-X";
         contaDoJuan.saldo = 100;
 
-        contaDoJuan.saldo = 200;
         Console.WriteLine("Saldo da conta do Juan = " + contaDoJuan.saldo);
+
+        contaDoJuan.Depositar(100);
+        Console.WriteLine("Saldo da conta do Juan pós-depósito = " + contaDoJuan.saldo);
+
     }
 }
