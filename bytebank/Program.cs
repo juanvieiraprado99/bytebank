@@ -15,5 +15,14 @@ internal class Program
         contaDoJuan.Depositar(100);
         Console.WriteLine("Saldo da conta do Juan pós-depósito = " + contaDoJuan.saldo);
 
+        if(contaDoJuan.Sacar(300))
+        {
+            Console.WriteLine("Saldo da conta do Juan depois do saque = " + contaDoJuan.saldo); 
+        }
+        else
+        {
+            Console.WriteLine("Saldo insuficiente para saque.");
+        }
+
     }
 }
