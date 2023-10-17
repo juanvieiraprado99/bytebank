@@ -59,24 +59,37 @@ internal class Program
 
         //Console.WriteLine(valor == valor2);
 
-        Cliente cliente = new Cliente();
-        cliente.nome = "Juan Prado";
-        cliente.cpf = "123.456.789-00";
-        cliente.profissao = "Desenvolvedor";
+        //Cliente cliente = new Cliente();
+        //cliente.nome = "Juan Prado";
+        //cliente.cpf = "123.456.789-00";
+        //cliente.profissao = "Desenvolvedor";
 
-        ContaCorrente conta = new ContaCorrente();
-        conta.titular = cliente;
-        conta.conta = "1010-X";
-        conta.numero_agencia = 15;
-        conta.saldo = 100;
+        //ContaCorrente conta = new ContaCorrente();
+        //conta.titular = cliente;
+        //conta.conta = "1010-X";
+        //conta.numero_agencia = 15;
+        //conta.saldo = 100;
 
-        Console.WriteLine("Titular = " + conta.titular.nome);
-        Console.WriteLine("CPF = " + conta.titular.cpf);
-        Console.WriteLine("Profissão = " + conta.titular.profissao);
-        Console.WriteLine("Nº Conta = " + conta.conta);
-        Console.WriteLine("Saldo = " + conta.saldo);
-        Console.WriteLine("Nº Agência = " + conta.numero_agencia);
+        //Console.WriteLine("Titular = " + conta.titular.nome);
+        //Console.WriteLine("CPF = " + conta.titular.cpf);
+        //Console.WriteLine("Profissão = " + conta.titular.profissao);
+        //Console.WriteLine("Nº Conta = " + conta.conta);
+        //Console.WriteLine("Saldo = " + conta.saldo);
+        //Console.WriteLine("Nº Agência = " + conta.numero_agencia);
 
+        //ContaCorrente conta2 = new ContaCorrente();
+        //conta2.titular = new Cliente();
+        //conta2.titular.nome = "Julia Cristina";
+        //conta2.titular.profissao = "Mãe";
+        //conta2.titular.cpf = "987654321";
+        //conta2.conta = "9999-X";
+        //conta2.numero_agencia = 18;
+        //conta2.saldo = 100;
 
+        //Console.WriteLine(conta2.titular.nome);
+
+        ContaCorrente conta2 = new ContaCorrente();
+        conta2.SetSaldo(10);
+        Console.WriteLine(conta2.GetSaldo());
     }
 }
