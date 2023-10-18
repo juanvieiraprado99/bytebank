@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using bytebank.Titular;
+using bytebank;
 
 namespace bytebank.Contas
 {
@@ -13,7 +13,7 @@ namespace bytebank.Contas
         public int Numero_Agencia
         {
             get { return numero_agencia; }
-            set { 
+            private set { 
                     if(value > 0)
                     {
                         this.numero_agencia = value;
@@ -21,10 +21,11 @@ namespace bytebank.Contas
                     
                 }
         }
-        private string conta;
+        //private string conta;
+        public string Conta {  get; set; }
         private double saldo;
 
-        private Cliente titular;
+        public Cliente Titular { get; set; }
 
 
         public void Depositar(double valor)
@@ -74,6 +75,12 @@ namespace bytebank.Contas
         public double GetSaldo()
         {
             return this.saldo;
+        }
+
+        public ContaCorrente(int numero_agencia, string numero_conta)
+        {
+            this.Numero_Agencia = numero_agencia;
+            this.Conta = numero_conta;
         }
     }
 }

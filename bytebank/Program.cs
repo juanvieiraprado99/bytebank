@@ -1,5 +1,5 @@
 ﻿using bytebank.Contas;
-using bytebank.Titular;
+using bytebank;
 
 internal class Program
 {
@@ -88,8 +88,20 @@ internal class Program
 
         //Console.WriteLine(conta2.titular.nome);
 
-        ContaCorrente conta2 = new ContaCorrente();
-        conta2.SetSaldo(10);
-        Console.WriteLine(conta2.GetSaldo());
+        //ContaCorrente conta2 = new ContaCorrente();
+        //conta2.Numero_Agencia = 18;
+        //conta2.Conta = "1911-H";
+        //conta2.SetSaldo(10);
+        //Console.WriteLine(conta2.GetSaldo());
+        //Console.WriteLine(conta2.Numero_Agencia);
+        //Console.WriteLine(conta2.Conta);
+
+        ContaCorrente conta4 = new ContaCorrente(18, "1010-X");
+        conta4.SetSaldo(500);
+        conta4.Titular = new Cliente();
+
+        Console.WriteLine(conta4.GetSaldo());
+        Console.WriteLine(conta4.Numero_Agencia);
+
     }
 }
